@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/koleskabLayout"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".fragment.Koleskab">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/køleskabsVare"
+    android:layout_width="408dp"
+    android:layout_height="349dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.428"
+    app:layout_constraintStart_toStartOf="parent" />
+
+  <Button
+    android:id="@+id/tilføjVare"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="28dp"
+    android:text="Tilføj vare"
+    app:layout_constraintBottom_toBottomOf="@+id/sletVare"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+  <EditText
+    android:id="@+id/navnVare"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:ems="10"
+    android:inputType="textPersonName"
+    android:text="Varenavn"
+    app:layout_constraintEnd_toEndOf="@+id/datePicker"
+    app:layout_constraintTop_toBottomOf="@+id/koleskab" />
+
+  <Button
+    android:id="@+id/sletVare"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="132dp"
+    android:text="Slet alle vare"
+    app:layout_constraintEnd_toStartOf="@+id/tilføjVare"
+    app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+  <TextView
+    android:id="@+id/koleskab"
+    android:layout_width="116dp"
+    android:layout_height="37dp"
+    android:layout_marginTop="36dp"
+    android:text="Køleskab"
+    android:textSize="25sp"
+    app:layout_constraintEnd_toStartOf="@+id/tilføjVare"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+    android:id="@+id/datePicker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:ems="10"
+
+    android:inputType="date"
+    app:layout_constraintStart_toStartOf="@+id/sletVare"
+    app:layout_constraintTop_toBottomOf="@+id/navnVare" />
+
+  <ImageView
+    android:id="@+id/imageAPI"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="20dp"
+    android:src="@drawable/baseline_kitchen_black_48dp"
+    app:layout_constraintBottom_toTopOf="@+id/køleskabsVare"
+    app:layout_constraintEnd_toStartOf="@+id/tilføjVare"
+    app:layout_constraintTop_toBottomOf="@+id/sletVare"
+    app:layout_constraintVertical_bias="0.521" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

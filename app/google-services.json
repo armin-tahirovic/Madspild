@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "576095957634",
+    "firebase_url": "https://madspild-ee6b1.firebaseio.com",
+    "project_id": "madspild-ee6b1",
+    "storage_bucket": "madspild-ee6b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576095957634:android:4fa0200a2c7db4592afa9b",
+        "android_client_info": {
+          "package_name": "com.example.madspild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576095957634-hidc3p9ehisu2utjf6lp67uv8eb8ct0t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx39JO9W62UXWkqZnei5tiKPGQVlf4b-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576095957634-hidc3p9ehisu2utjf6lp67uv8eb8ct0t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
