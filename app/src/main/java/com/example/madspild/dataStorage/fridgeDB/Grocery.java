@@ -1,16 +1,17 @@
-package com.example.madspild.dataStorage;
+package com.example.madspild.dataStorage.fridgeDB;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "grocery_table")
-public class Note {
+public class Grocery {
+
   @PrimaryKey(autoGenerate = true)
   private int id;
   private String grocery;
   private String date;
 
-  public Note(String grocery, String date) {
+  public Grocery(String grocery, String date) {
     this.grocery = grocery;
     this.date = date;
   }

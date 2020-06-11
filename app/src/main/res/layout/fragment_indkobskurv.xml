@@ -26,7 +26,6 @@
     android:layout_marginTop="120dp"
     android:layout_marginEnd="16dp"
     android:text="Tilføj"
-    android:onClick="saveNote"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="1.0"
     app:layout_constraintStart_toEndOf="@+id/edProduct"
@@ -59,14 +58,12 @@
 
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/rv"
-    android:layout_width="407dp"
-    android:layout_height="480dp"
-    android:layout_marginTop="16dp"
+    android:layout_width="411dp"
+    android:layout_height="494dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/deleteProduct"
-    app:layout_constraintVertical_bias="0.0" />
+    app:layout_constraintTop_toBottomOf="@+id/deleteProduct" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
