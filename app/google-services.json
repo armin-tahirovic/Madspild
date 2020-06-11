@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "576095957634-2p2tujancqdr0e8tdt5p39367ljggnvi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.madspild",
+            "certificate_hash": "9159f27b2f4eaed63426d907e67bf2ebfbe3f824"
+          }
+        },
+        {
           "client_id": "576095957634-hidc3p9ehisu2utjf6lp67uv8eb8ct0t.apps.googleusercontent.com",
           "client_type": 3
         }
