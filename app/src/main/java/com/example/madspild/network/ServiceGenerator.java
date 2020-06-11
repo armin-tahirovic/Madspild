@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ServiceGenerator {
 
   private static Retrofit.Builder retrofitBuilder = new Retrofit.Builder()
-    .baseUrl("https://api.spoonacular.com")
+    .baseUrl("https://api.spoonacular.com/food/products/")
     .addConverterFactory(GsonConverterFactory.create());
 
   private static Retrofit retrofit = retrofitBuilder.build();

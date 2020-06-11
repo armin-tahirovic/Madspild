@@ -9,16 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.madspild.R;
+import com.example.madspild.dataStorage.fridgeDB.Grocery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class KoleskabAdapter extends RecyclerView.Adapter<KoleskabAdapter.ViewHolder> {
 
-  List<Groceries> groceries;
-
-  public KoleskabAdapter(List<Groceries> groceries) {
-    this.groceries = groceries;
-  }
+  List<Grocery> groceries = new ArrayList<>();
 
   @NonNull
   @Override
@@ -30,13 +28,22 @@ public class KoleskabAdapter extends RecyclerView.Adapter<KoleskabAdapter.ViewHo
 
   @Override
   public void onBindViewHolder(@NonNull KoleskabAdapter.ViewHolder holder, int position) {
-    holder.groceryName.setText(groceries.get(position).getGroceryName());
-    holder.groceryDate.setText(groceries.get(position).getGroceryDate());
+    holder.groceryName.setText(groceries.get(position).getGrocery());
+    holder.groceryDate.setText(groceries.get(position).getDate());
   }
 
   @Override
   public int getItemCount() {
     return groceries.size();
+  }
+
+  public void setGroceries(List<Grocery> groceries) {
+    this.groceries = groceries;
+    notifyDataSetChanged();
+  }
+
+  public Grocery getGrocery(int position) {
+    return groceries.get(position);
   }
 
   public class ViewHolder extends RecyclerView.ViewHolder {

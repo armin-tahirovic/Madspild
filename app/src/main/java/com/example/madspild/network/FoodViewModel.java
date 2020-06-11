@@ -15,7 +15,7 @@ public class FoodViewModel extends ViewModel {
     return repository.getFood();
   }
 
-  public void updateFood(String s) {
-    repository.updateFood(s);
+  public void updateFood(String title, String number, String key) {
+    repository.updateFood(title, number, key);
   }
 }

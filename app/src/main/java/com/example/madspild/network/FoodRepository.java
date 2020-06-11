@@ -29,9 +29,9 @@ public class FoodRepository {
     return food;
   }
 
-  public void updateFood(String title) {
+  public void updateFood(String title, String number, String key) {
     FoodAPI foodAPI = ServiceGenerator.getFoodAPI();
-    Call<FoodResponse> call = foodAPI.getFood(title);
+    Call<FoodResponse> call = foodAPI.getFood(title, number, key);
     call.enqueue(new Callback<FoodResponse>() {
       @Override
       public void onResponse(Call<FoodResponse> call, Response<FoodResponse> response) {

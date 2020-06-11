@@ -9,16 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.madspild.R;
+import com.example.madspild.dataStorage.shoppingCartDB.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingAdapter extends RecyclerView.Adapter<ShoppingAdapter.ViewHolder> {
 
-  List<Product> products;
-
-  public ShoppingAdapter(List<Product> products) {
-    this.products = products;
-  }
+  List<Product> products = new ArrayList<>();
 
   @NonNull
   @Override
@@ -30,12 +28,22 @@ public class ShoppingAdapter extends RecyclerView.Adapter<ShoppingAdapter.ViewHo
 
   @Override
   public void onBindViewHolder(@NonNull ShoppingAdapter.ViewHolder holder, int position) {
-    holder.product.setText(products.get(position).getProductName());
+    Product currentProduct = products.get(position);
+    holder.product.setText(products.get(position).getProduct());
   }
 
   @Override
   public int getItemCount() {
     return products.size();
+  }
+
+  public void setProducts(List<Product> products) {
+    this.products = products;
+    notifyDataSetChanged();
+  }
+
+  public Product getProduct(int position) {
+    return products.get(position);
   }
 
   public class ViewHolder extends RecyclerView.ViewHolder {
