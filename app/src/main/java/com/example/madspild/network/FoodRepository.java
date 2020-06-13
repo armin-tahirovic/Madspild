@@ -36,13 +36,14 @@ public class FoodRepository {
       @Override
       public void onResponse(Call<FoodResponse> call, Response<FoodResponse> response) {
         if (response.code() == 200) {
-          food.setValue(response.body().getFood());
+          food.setValue(response.body().getFood().get(0));
+          System.out.println("<<< TEST >>>");
         }
       }
 
       @Override
       public void onFailure(Call<FoodResponse> call, Throwable t) {
-        Log.i("Retrofit","Something went wrong");
+        Log.i("Retrofit",t.toString());
       }
     });
   }

@@ -69,8 +69,8 @@
 
   <ImageView
     android:id="@+id/imageAPI"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
     android:layout_marginEnd="20dp"
     android:src="@drawable/baseline_kitchen_black_48dp"
     app:layout_constraintEnd_toStartOf="@+id/tilføjVare"

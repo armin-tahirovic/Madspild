@@ -1,16 +1,15 @@
 package com.example.madspild.network;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
 public class FoodResponse {
 
-  private Products products;
+  @SerializedName("products")
+  private List<Food> foodList;
 
-  public Food getFood() {
-    return new Food(products.id, products.title, products.image);
-  }
-
-  private class Products {
-    private int id;
-    private String title;
-    private String image;
+  public List<Food> getFood() {
+    return foodList;
   }
 }
