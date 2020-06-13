@@ -60,7 +60,6 @@
     android:id="@+id/rv"
     android:layout_width="411dp"
     android:layout_height="494dp"
-    app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"

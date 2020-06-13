@@ -10,11 +10,11 @@
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/køleskabsVare"
     android:layout_width="408dp"
-    android:layout_height="349dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_height="371dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.428"
-    app:layout_constraintStart_toStartOf="parent" />
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageAPI" />
 
   <Button
     android:id="@+id/tilføjVare"
@@ -73,9 +73,9 @@
     android:layout_height="wrap_content"
     android:layout_marginEnd="20dp"
     android:src="@drawable/baseline_kitchen_black_48dp"
-    app:layout_constraintBottom_toTopOf="@+id/køleskabsVare"
     app:layout_constraintEnd_toStartOf="@+id/tilføjVare"
-    app:layout_constraintTop_toBottomOf="@+id/sletVare"
-    app:layout_constraintVertical_bias="0.521" />
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toEndOf="@+id/sletVare"
+    app:layout_constraintTop_toBottomOf="@+id/sletVare" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

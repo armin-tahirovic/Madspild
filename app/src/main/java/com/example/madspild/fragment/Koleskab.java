@@ -62,6 +62,16 @@ public class Koleskab extends Fragment {
     groceryDate = view.findViewById(R.id.datePicker);
     imageView = view.findViewById(R.id.imageAPI);
 
+    // API
+    foodViewModel = new ViewModelProvider(this).get(FoodViewModel.class);
+    foodViewModel.getFood().observe(getViewLifecycleOwner(), new Observer<Food>() {
+      @Override
+      public void onChanged(Food food) {
+        Glide.with(Koleskab.this).load(food.getImage()).into(imageView);
+        System.out.println("<<< Hvad får jeg ud: " + food.getImage() + " >>>");
+      }
+    });
+
     // Data storage
     groceryViewModel = new ViewModelProvider(this).get(GroceryViewModel.class);
     groceryViewModel.getAllGroceries().observe(getViewLifecycleOwner(), new Observer<List<Grocery>>() {
@@ -96,15 +106,6 @@ public class Koleskab extends Fragment {
       public void onClick(View v) {
         groceryViewModel.deleteAllGroceries();
         groceriesAdapter.notifyDataSetChanged();
-      }
-    });
-
-    // API
-    foodViewModel = new ViewModelProvider(this).get(FoodViewModel.class);
-    foodViewModel.getFood().observe(getViewLifecycleOwner(), new Observer<Food>() {
-      @Override
-      public void onChanged(Food food) {
-        Glide.with(Koleskab.this).load(food.getImage()).into(imageView);
       }
     });
 
