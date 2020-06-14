@@ -30,6 +30,7 @@ import com.example.madspild.dataStorage.fridgeDB.GroceryViewModel;
 import com.example.madspild.network.Food;
 import com.example.madspild.network.FoodViewModel;
 import com.example.madspild.recyclerview.koleskab.KoleskabAdapter;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -68,7 +69,6 @@ public class Koleskab extends Fragment {
       @Override
       public void onChanged(Food food) {
         Glide.with(Koleskab.this).load(food.getImage()).into(imageView);
-        System.out.println("<<< Hvad får jeg ud: " + food.getImage() + " >>>");
       }
     });
 
